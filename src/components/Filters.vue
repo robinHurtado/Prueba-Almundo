@@ -1,16 +1,21 @@
 <template>
-  <article class="mw7 bg-white pa2 pa3-ns pv1-ns mv0 mv4-ns ml4-ns ba b--black-10">
+  <article class="mw7 bg-white pa2 pa3-ns pv1-ns mv0 mv4-ns ml4-ns ba b--black-10 shadow-4">
     <div class="f4 mv2">
       <strong>Filtros</strong>
       <hr class="mw8 bb bw1 b--black-10">
     </div>
-    <p class="center blue b f6 black-70">Nombre del hotel</p>
+    <div class="pb2">
+      <span>
+        <img src="../assets/icons/filters/search.svg" alt="">
+      </span>
+      <a href="#" class="center link blue b f6 black-70">Nombre del hotel</a><br>
+    </div>
     <input class="pa2"v-model="filter" type="text" name="" value="" placeholder="ingrese el nombre del hotel">
-
     <a class="f5 link dim br2 ml2 ph3 pv2 mb1 dib white bg-dark-blue" href="#">Aceptar</a>
+    <hr class="mw8 bb bw1 b--black-10 mt2">
     <div class="">
-      <form class="pt2">
-        <fieldset id="favorite_movies" class="bn">
+      <form class="pt3">
+        <fieldset id="favorite_movies" class="bn pa0">
           <div class="flex items-center mb2">
             <input class="mr2" type="checkbox" value="start">
             <label for="spacejam" class="b">Todas las estrellas</label>
@@ -43,7 +48,7 @@
             </label>
           </div>
           <div class="flex items-center mb2">
-            <input class="mr2" type="checkbox" value="start">
+            <input class="mr2 checkbox" type="checkbox" value="start">
             <label for="primer" class="lh-copy">
               <img src="../assets/icons/filters/star.svg" alt="star" />
               <img src="../assets/icons/filters/star.svg" alt="star" />
