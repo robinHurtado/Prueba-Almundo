@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="mw9 bg-white pa2 pa3-ns mr4-ns mv3 mv4-ns mh2 mh2-ns shadow-4 " v-for="(hotel, index) of filteredHotels" :key="index">
+    <section class="mw9 bg-white pa2 pa3-ns mr4-ns mv3 mv4-ns mh2 mh3-ns shadow " v-for="(hotel, index) of filteredHotels" :key="index">
       <article class="ui stackable three column grid">
         <div class="row" >
           <div class="five wide computer column">
@@ -15,9 +15,10 @@
             <div class="amenities">
               <img
                 v-if="hotel.amenities.indexOf('safety-box') !== -1"
-                class="mw-10 0 mt2 ph1"
+                class="mw-10 0 mt2 ph1 hint--top"
                 src="../assets/icons/amenities/safety-box.svg"
                 alt="star"
+                data-hint="Lorem Ipsum Dolor Sit Amet"
               >
               <img
                 v-if="hotel.amenities.indexOf('bathrobes') !== -1"
@@ -118,10 +119,10 @@
             </div>
           </div>
 
-          <div class="four wide column bl  b--light-gray tc">
+          <div class="ui middle aligned four wide column bl  b--light-gray tc">
             <span class="f6">Precio de noche por habitación</span>
-            <h4 class="f3 orange">ARS <strong class="f2 dib v-mid">{{ hotel.price }}</strong></h4>
-            <a class="w-100 f4 b f6-ns f4-ns link dim br2 ph5 ph4-ns pv2 mb2 dib white bg-dark-blue" href="#">Ver hotel</a>
+            <h4 class="f3 orange mv2">ARS <strong class="f2 dib v-mid">{{ hotel.price }}</strong></h4>
+            <a class="w-90 f4 b f6-ns f4-ns link dim br2 ph5 ph4-ns pv2 mb2 dib white bg-dark-blue" href="#">Ver hotel</a>
           </div>
         </div>
       </article>
@@ -174,4 +175,7 @@ export default {
 </script>
 
 <style>
+.shadow{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12)
+}
 </style>
