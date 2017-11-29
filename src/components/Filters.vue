@@ -1,5 +1,5 @@
 <template>
-  <article class="mw7 pa2 pa3-ns pv1-ns mv0 mv4-ns ml4-ns  ">
+  <article class="mw7 pa2 pa3-ns pv1-ns  ml4-ns  ">
     <div class="ui three columns grid ">
       <div class="sixteen wide column bg-white shadow ba b--black-10 f5 mt2 mb1">
         <strong>Filtros</strong>
@@ -23,11 +23,11 @@
         <form class="pt1">
           <fieldset id="favorite_movies" class="bn pa0">
             <div class="flex items-center mb2">
-              <input class="mr2" type="checkbox" value="start">
+              <input class="mr2" type="checkbox" value="start" v-model="checkedStars">
               <label for="spacejam" class="b">Todas las estrellas</label>
             </div>
             <div class="flex items-center mb2">
-              <input class="mr2" type="checkbox"  value="start">
+              <input class="mr2" type="checkbox"  value="start" v-model="checkedStars">
               <label for="airbud" class="lh-copy">
                 <img class="mw-10 " src="../assets/icons/filters/star.svg" alt="star" />
                 <img class="mw-10 " src="../assets/icons/filters/star.svg" alt="star" />
@@ -37,7 +37,7 @@
               </label>
             </div>
             <div class="flex items-center mb2">
-              <input class="mr2" type="checkbox" value="start">
+              <input class="mr2" type="checkbox" value="start" v-model="checkedStars">
               <label for="hocuspocus" class="lh-copy">
                 <img src="../assets/icons/filters/star.svg" alt="star" />
                 <img src="../assets/icons/filters/star.svg" alt="star" />
@@ -46,7 +46,7 @@
               </label>
             </div>
             <div class="flex items-center mb2">
-              <input class="mr2" type="checkbox" value="start">
+              <input class="mr2" type="checkbox" value="start" v-model="checkedStars">
               <label for="diehard" class="lh-copy">
                 <img class="mw-10 " src="../assets/icons/filters/star.svg" alt="star" />
                 <img class="mw-10 " src="../assets/icons/filters/star.svg" alt="star" />
@@ -54,14 +54,14 @@
               </label>
             </div>
             <div class="flex items-center mb2">
-              <input class="mr2 checkbox" type="checkbox" value="start">
+              <input class="mr2 checkbox" type="checkbox" value="start" v-model="checkedStars" >
               <label for="primer" class="lh-copy">
                 <img src="../assets/icons/filters/star.svg" alt="star" />
                 <img src="../assets/icons/filters/star.svg" alt="star" />
               </label>
             </div>
             <div class="flex items-center mb2">
-              <input class="mr2" type="checkbox" value="start">
+              <input class="mr2" type="checkbox" value="start" v-model="checkedStars">
               <label for="proxy" class="lh-copy">
                 <img src="../assets/icons/filters/star.svg" alt="star" />
               </label>
@@ -78,7 +78,8 @@ export default {
   name: 'filters',
   data () {
     return {
-      filter: ''
+      filter: '',
+      checkedStars: false
     }
   },
   watch: {
@@ -91,7 +92,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.star{
-  fill:blue !important;
+.star svg{
+  fill: blue;
 }
 </style>

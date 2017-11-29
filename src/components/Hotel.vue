@@ -1,16 +1,16 @@
 <template>
   <div>
-    <section class="mw9 bg-white pa2 pa3-ns mr4-ns mv3 mv4-ns mh2 mh3-ns shadow " v-for="(hotel, index) of filteredHotels" :key="index">
+    <section class="mw9 bg-white pa2 p2-ns mt3-ns mr2 mr4-ns ml2 ml0-ns shadow " v-for="(hotel, index) of filteredHotels" :key="index">
       <article class="ui stackable three column grid">
         <div class="row" >
           <div class="five wide computer column">
-            <img class="mw-10 0" :src="path(hotel.image)" alt="imagen hotel">
+            <img class="" :src="path(hotel.image)" alt="imagen hotel">
           </div>
 
-          <div class="seven wide column">
+          <div class="seven wide column pl5 ">
             <span class="f5 blue b">{{ hotel.name }}</span>
             <div class="rating pt1">
-              <img class="mw-10 " src="../assets/icons/filters/star.svg" alt="star" v-for="star in hotel.stars">
+              <img src="../assets/icons/filters/star.svg" alt="star" v-for="star in hotel.stars">
             </div>
             <div class="amenities">
               <img
@@ -119,7 +119,7 @@
             </div>
           </div>
 
-          <div class="ui middle aligned four wide column bl  b--light-gray tc">
+          <div class="ui middle aligned four wide column bl tc">
             <span class="f6">Precio de noche por habitación</span>
             <h4 class="f3 orange mv2">ARS <strong class="f2 dib v-mid">{{ hotel.price }}</strong></h4>
             <a class="w-90 f4 b f6-ns f4-ns link dim br2 ph5 ph4-ns pv2 mb2 dib white bg-dark-blue" href="#">Ver hotel</a>
@@ -177,5 +177,10 @@ export default {
 <style>
 .shadow{
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12)
+}
+
+.bl{
+  border-right: dashed #ccc;
+  border-right-width: thin;
 }
 </style>
