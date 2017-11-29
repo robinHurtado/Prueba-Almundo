@@ -2,7 +2,7 @@
   <div id="app">
     <div class="w-100 pv3 ph3">
       <div class="blue column">
-        <img class="w-50 w-20-ns"src="./assets/images/logo-almundo.svg">
+        <!--<img class="w-50 w-20-ns"src="./assets/images/logo-almundo.svg">-->
       </div>
     </div>
 
