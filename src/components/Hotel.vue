@@ -8,114 +8,164 @@
           </div>
 
           <div class="seven wide column pl5 ">
-            <span class="f5 blue b">{{ hotel.name }}</span>
+            <span class="f5 blue b" data-hint="Lorem Ipsum Dolor Sit Amet">{{ hotel.name }}</span>
             <div class="rating pt1">
               <img src="../assets/icons/filters/star.svg" alt="star" v-for="star in hotel.stars">
             </div>
             <div class="amenities">
-              <img
-                v-if="hotel.amenities.indexOf('safety-box') !== -1"
-                class="mw-10 0 mt2 ph1 hint--top"
-                src="../assets/icons/amenities/safety-box.svg"
-                alt="star"
-                data-hint="Lorem Ipsum Dolor Sit Amet"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('bathrobes') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/bathrobes.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('bathtub') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/bathtub.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('beach-pool-facilities') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/beach-pool-facilities.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('beach') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/beach.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('business-center') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/business-center.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('children-club') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/children-club.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('coffe-maker') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/coffe-maker.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('deep-soaking-bathtub') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/deep-soaking-bathtub.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('fitness-center') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/fitness-center.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('garden') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/garden.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('kitchen-facilities') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/kitchen-facilities.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('newspaper') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/newspaper.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('nightclub') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/nightclub.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('restaurant') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/restaurant.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('separate-bredroom') !== -1"
-                class="mw-10 0 mt2 ph1"
-                src="../assets/icons/amenities/separate-bredroom.svg"
-                alt="star"
-              >
-              <img
-                v-if="hotel.amenities.indexOf('sheets') !== -1"
-                class="mw-10 0 mt2"
-                src="../assets/icons/amenities/sheets.svg"
-                alt="star"
-              >
+              <span class="hint--bottom" aria-label="Caja de seguridad">
+                <img
+                  v-if="hotel.amenities.indexOf('safety-box') !== -1"
+                  class="mw-10 0 mt2 ph1 "
+                  src="../assets/icons/amenities/safety-box.svg"
+                  alt="star"
+
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="batas de baño">
+                <img
+                  v-if="hotel.amenities.indexOf('bathrobes') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/bathrobes.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Bañera">
+                <img
+                  v-if="hotel.amenities.indexOf('bathtub') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/bathtub.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Piscina">
+                <img
+                  v-if="hotel.amenities.indexOf('beach-pool-facilities') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/beach-pool-facilities.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Playa">
+                <img
+                  v-if="hotel.amenities.indexOf('beach') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/beach.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Centro de negocios">
+                <img
+                  v-if="hotel.amenities.indexOf('business-center') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/business-center.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Guarderia">
+                <img
+                  v-if="hotel.amenities.indexOf('children-club') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/children-club.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Cafetera">
+                <img
+                  v-if="hotel.amenities.indexOf('coffe-maker') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/coffe-maker.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Bañera">
+                <img
+                  v-if="hotel.amenities.indexOf('deep-soaking-bathtub') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/deep-soaking-bathtub.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Gimnacio">
+                <img
+                  v-if="hotel.amenities.indexOf('fitness-center') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/fitness-center.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Jardin">
+                <img
+                  v-if="hotel.amenities.indexOf('garden') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/garden.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span  class="hint--bottom" aria-label="Instalaciones de cocina">
+                <img
+                  v-if="hotel.amenities.indexOf('kitchen-facilities') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/kitchen-facilities.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Periodico">
+                <img
+                  v-if="hotel.amenities.indexOf('newspaper') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/newspaper.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Club nocturno">
+                <img
+                  v-if="hotel.amenities.indexOf('nightclub') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/nightclub.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Restaurante">
+                <img
+                  v-if="hotel.amenities.indexOf('restaurant') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/restaurant.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Dormitorio separado">
+                <img
+                  v-if="hotel.amenities.indexOf('separate-bredroom') !== -1"
+                  class="mw-10 0 mt2 ph1"
+                  src="../assets/icons/amenities/separate-bredroom.svg"
+                  alt="star"
+                />
+              </span>
+
+              <span class="hint--bottom" aria-label="Sabanas">
+                <img
+                  v-if="hotel.amenities.indexOf('sheets') !== -1"
+                  class="mw-10 0 mt2"
+                  src="../assets/icons/amenities/sheets.svg"
+                  alt="star"
+                />
+              </span>
             </div>
           </div>
 
@@ -131,7 +181,9 @@
 </template>
 
 <script>
+import 'hint.css'
 import axios from 'axios'
+
 const servicios = {
   hotels: axios.create({
     baseURL: 'http://localhost:3001/api/fetchAllHotels'
